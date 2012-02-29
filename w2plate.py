@@ -19,16 +19,12 @@ for i in range(len(plateWeight)):
 	elif weight % plateWeight[i]  == 0 and weight !=0:
 		q = weight // plateWeight[i]
 		weight = weight - plateWeight[i] * q
-		plates.insert(i,q*2)
-		print "this is weight %r this is i %r this is plateweight %r this is the quotient %r" % (weight, i, plateWeight[i], q)
-		
+		plates.insert(i,q*2)		
 	elif weight % plateWeight[i] != 0:
 	    q = weight // plateWeight[i]
 	    r = weight % plateWeight[i]
 	    weight = r
-	    plates.insert(i,q*2)
-	print "weight is %r i is %r this is plateweight %r this is the quotient %r" % (weight, i, plateWeight[i], q)
-        		
+	    plates.insert(i,q*2)        		
 else:
 	i = i +1 
 
