@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 weight = input("Enter weight: ")
 bar = 45
 plateWeight = [45, 35, 25, 10, 5, 2.5]
@@ -16,7 +18,7 @@ for i in range(len(plateWeight)):
 	    break
 	elif weight % plateWeight[i]  == 0 and weight !=0:
 		q = weight // plateWeight[i]
-		weight = weight - plateWeight[i]
+		weight = weight - plateWeight[i] * q
 		plates.insert(i,q*2)
 		print "this is weight %r this is i %r this is plateweight %r this is the quotient %r" % (weight, i, plateWeight[i], q)
 		
@@ -25,7 +27,7 @@ for i in range(len(plateWeight)):
 	    r = weight % plateWeight[i]
 	    weight = r
 	    plates.insert(i,q*2)
-	print "this is weight %r this is i %r this is plateweight %r this is the quotient %r" % (weight, i, plateWeight[i], q)
+	print "weight is %r i is %r this is plateweight %r this is the quotient %r" % (weight, i, plateWeight[i], q)
         		
 else:
 	i = i +1 
